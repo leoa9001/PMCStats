@@ -1,0 +1,12 @@
+
+table, th, td {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	/*border-width: 1px;*/
+	border-spacing: 2px;
+	/*border: solid;*/
+	border: 1px solid black;
+	/*border-collapse: collapse;*/
+}
