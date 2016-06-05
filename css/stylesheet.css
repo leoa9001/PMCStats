@@ -56,9 +56,11 @@ Stats Navigation Bar
 }
 
 li .stats-link {
-	padding: 30px 0 8px 16px;
+	padding: 12px 16px 12px 16px;
+	margin-top: 5px;
+	margin-bottom: 5px;
 	display: block;
-	width: 100px;
+	width: 80px;
 	height: 42px;
 	text-decoration: none;
 	background-color: rgb(45, 45, 45);
