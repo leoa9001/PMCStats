@@ -1,11 +1,12 @@
+/* Stylesheet */
 
-
-
+body {
+	background-color: rgb(56, 56, 56);
+}
 
 #topPlayersTable {
 	border: 3px solid blue;
 }
-
 
 #topPlayersTable  th, td {
 	border-top-width: 1px;
@@ -18,3 +19,80 @@
 	border: 1px solid black;
 	/*border-collapse: collapse;*/
 }
+
+/*
+Player Image
+*/
+
+#player-image {
+	width: 500px;
+	height: 500px;
+	background-color: green;
+	margin: 10px;
+	border-radius: 15px;
+}
+
+/*
+Stats Navigation Bar
+*/
+
+#stats-nav {
+	position: relative;
+	height: 80px;
+	z-index: 150;
+	margin-bottom: -80px;
+	border-radius: 15px;
+}
+
+#stats-list {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	clear: both;
+}
+
+#stats-list li {
+	float: left;
+}
+
+li .stats-link {
+	padding: 30px 0 8px 16px;
+	display: block;
+	width: 100px;
+	height: 42px;
+	text-decoration: none;
+	background-color: rgb(45, 45, 45);
+	border-radius: 15px;
+}
+
+li .stats-link:hover {
+	background-color: #555;
+	color: white;
+	/*border-radius: 15px;*/
+}
+
+#stats-list li .stats-link {
+	color: rgba(255, 255, 255, 0.5);
+}
+
+/*
+Stats Content
+*/
+
+.hide {
+	display: none;
+}
+
+#stats-content {
+	margin: 10px;
+	margin-top: 200px;
+	height: 300px;
+	width: 500px;
+	position: relative;
+	background-color: white;
+}
+
+
+
+
+
