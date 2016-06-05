@@ -83,7 +83,7 @@ Stats Content
 	display: none;
 }
 
-#stats-content {
+.stats-content {
 	margin: 10px;
 	margin-top: 200px;
 	height: 300px;
