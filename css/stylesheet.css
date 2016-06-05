@@ -1,5 +1,13 @@
 
-table, th, td {
+
+
+
+#topPlayersTable {
+	border: 3px solid blue;
+}
+
+
+#topPlayersTable  th, td {
 	border-top-width: 1px;
 	border-right-width: 1px;
 	border-bottom-width: 1px;
