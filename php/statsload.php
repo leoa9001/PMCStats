@@ -1,6 +1,14 @@
 <?php
 
 $playersName = $_GET['name'];
+
+if(file_exists("../stats/".$playersName)){
+	header("Location: ../stats/".$playersName."/index.html");
+	return;
+}
+
+
+
 $playerData = array();
 $dataFile = fopen("../data/PlayerStatData.csv", "r");
 $colIndices = fgetcsv($dataFile);
@@ -32,6 +40,13 @@ if(!$playerFound){
 	echo "<h1> AINT NO PLAYA</h1>";
 	return;
 }
+
+// mkdir("../stats/".$playersName,770);
+
+// $siteFile = fopen("../stats/".$playersName."/index.html", "w");
+
+// fwrite($siteFile, "<h1>This be the playa".$siteFile."</h1>");
+
 
 
 
