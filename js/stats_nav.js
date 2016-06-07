@@ -4,24 +4,23 @@
 *
 */
 
-$(".stats-link").click(function(e) {
 
+
+$(".stats-link").click(function(e) {
+	//index getting without id
 	var index = $("#stats-list li").index($(this).parent());
 
+
+	// I'm still unsure why this loop is necessary but it appears it is.
 	for (var i = 0; i < $("#stats-list .stats-link").length; i++) {
-		if (i == index) {
-
-			var a = $("#stats div:nth-child(" + i + ")");
-			a.removeClass("hide");
-
-		} else {
+		if (i != index) {
 			var a = $("#stats div:nth-child(" + i + ")");
 			a.addClass("hide");
-
-			// $("#stats #" + i).addClass("hide");
 		}
 		
 	}
 
-	alert("click");
+	var a = $("#stats div:nth-child(" + index + ")");
+	a.removeClass("hide");
+
 });
