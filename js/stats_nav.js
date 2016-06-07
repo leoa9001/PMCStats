@@ -1,26 +1,27 @@
-// $(document).keypress(function(e) {
-// 	if(e.which == 13) {
-// 		alert('You pressed enter!');
-// 	}
-// });
+/* Stats bar navigation script.
+*
+*
+*
+*/
 
 $(".stats-link").click(function(e) {
-	// alert(e.target.id);
 
-	// alert($("#stats-list .stats-link").length);
+	var index = $("#stats-list li").index($(this).parent());
+
 	for (var i = 0; i < $("#stats-list .stats-link").length; i++) {
-		if (i == parseInt(e.target.id)) {
-			// alert("something");
-			// alert($("#stats:nth-child(1)").id);
-			// alert($("#stats :nth-child(" + e.target.id + ")").id);
-			// $("#stats:nth-child(e.target.id)").removeClass("hide");
-			$("#stats #" + i).removeClass("hide");
+		if (i == index) {
+
+			var a = $("#stats div:nth-child(" + i + ")");
+			a.removeClass("hide");
+
 		} else {
-			// alert("something else");
-			// alert($("#stats:nth-child(1)").id);
-			// alert($("#stats :nth-child(" + e.target.id + ")").id);
-			// $("#stats:nth-child(e.target.id)").addClass("hide");
-			$("#stats #" + i).addClass("hide");
+			var a = $("#stats div:nth-child(" + i + ")");
+			a.addClass("hide");
+
+			// $("#stats #" + i).addClass("hide");
 		}
+		
 	}
+
+	alert("click");
 });
