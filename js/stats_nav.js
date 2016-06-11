@@ -8,12 +8,12 @@
 
 $(".stats-link").click(function(e) {
 	//index getting without id
-	var index = $("#stats-list li").index($(this).parent());
+	var index = $("#stats-list li").index($(this).parent()) ;
 
 
 	// I'm still unsure why this loop is necessary but it appears it is.
 	for (var i = 1; i <= $("#stats-list .stats-link").length; i++) {
-		if (i != index) {
+		if (i != index+1) {
 			var a = $("#stats div:nth-child(" + i + ")");
 			a.addClass("hide");
 		}
