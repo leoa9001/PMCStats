@@ -12,7 +12,7 @@ $(".stats-link").click(function(e) {
 
 
 	// I'm still unsure why this loop is necessary but it appears it is.
-	for (var i = 0; i < $("#stats-list .stats-link").length; i++) {
+	for (var i = 1; i <= $("#stats-list .stats-link").length; i++) {
 		if (i != index) {
 			var a = $("#stats div:nth-child(" + i + ")");
 			a.addClass("hide");
@@ -20,7 +20,6 @@ $(".stats-link").click(function(e) {
 		
 	}
 
-	var a = $("#stats div:nth-child(" + index + ")");
+	var a = $("#stats div:nth-child(" + (index+1) + ")");
 	a.removeClass("hide");
-
 });
