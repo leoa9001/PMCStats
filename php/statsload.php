@@ -1,7 +1,6 @@
 <?php
 /*
-Should check if stuff exists
-Does the player head loading thing requesting
+Checks if stuff exists
 */
 
 function grab_image($url,$saveto){
@@ -19,6 +18,10 @@ function grab_image($url,$saveto){
     fclose($fp);
 }
 
+
+/*
+the generalized version is lower in the script
+
 grab_image("http://mcskinsearch.com/download/rio9001", "../img/heads/rio9001.png");
 
 $rect = array("x" => 8, "y" => 8, "width" => 8, "height" => 8);
@@ -27,6 +30,8 @@ $img = imagecrop(imagecreatefrompng("../img/heads/rio9001.png"), $rect);
 imagepng($img, "../img/Heads/rio9001.png");
 
 
+
+*/
 /*
 Rest
 */
@@ -34,8 +39,8 @@ Rest
 
 $playersName = $_GET['name'];
 
-if(file_exists("../stats/".$playersName)){
-	header("Location: ../stats/".$playersName."/index.html");
+if(file_exists("../stats/players/".$playersName)){
+	header("Location: ../stats/players/".$playersName."/index.html");
 	return;
 }
 
@@ -66,6 +71,8 @@ while(!feof($dataFile)){
 
 }
 
+fclose($dataFile);
+
 
 
 if(!$playerFound){
@@ -73,19 +80,35 @@ if(!$playerFound){
 	return;
 }
 
-// mkdir("../stats/".$playersName,770);
+grab_image("http://mcskinsearch.com/download/".$playersName, "../img/player heads/".$playersName.".png");
 
-// $siteFile = fopen("../stats/".$playersName."/index.html", "w");
+$rect = array("x" => 8, "y" => 8, "width" => 8, "height" => 8);
 
-// fwrite($siteFile, "<h1>This be the playa".$siteFile."</h1>");
-
-
-
+$img = imagecrop(imagecreatefrompng("../img/player heads/".$playersName.".png"), $rect);
+imagepng($img, "../img/player heads/".$playersName.".png");
 
 
+
+
+//Making of the website and folders.
+mkdir("../stats/players/".$playersName, 0700);
+
+$siteFile = fopen("../stats/players/".$playersName."/index.html", "w");
+
+fwrite($siteFile, "<h1>This be the playa ".$playersName."</h1>");
+
+
+/*
+    Should replaces this with EOD and actual player's site construction.
+*/
 for($i = 0; $i < count($colIndices);$i++){
-	echo "<p>". $colIndices[$i].": ".$playerData[$i]."</p>";
+    fwrite($siteFile, "<p>". $colIndices[$i].": ".$playerData[$i]."</p>");
 }
+
+fclose($siteFile);
+
+//finally redirecet
+header("Location: ../stats/players/".$playersName."/index.html");
 
 
 
