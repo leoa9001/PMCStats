@@ -73,7 +73,7 @@ if(!$playerFound){
 	return;
 }
 
-// mkdir("../stats/".$playersName,770);
+mkdir("../stats/".$playersName,0770);
 
 // $siteFile = fopen("../stats/".$playersName."/index.html", "w");
 
