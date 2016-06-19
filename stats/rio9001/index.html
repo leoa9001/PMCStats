@@ -19,10 +19,10 @@
 			<div id = "basic-info">
 				<div id = "name">
 					<!-- Idk what kind of prefix thingy we want, if any at all... -->
-					rio9001
+					Name: $playersName
 				</div>
 				<div id = "level">
-					Lv. 9001
+					Lv. :$$statindex60
 				</div>
 			</div>
 
@@ -49,28 +49,383 @@
 
 		<div id = "stats">
 			<div class = "stats-content">
-				0
+				
+
+				<table id = "stats-general">
+					<thead>
+						<tr><td colspan  = "4"> General </td></tr>
+					</thead>
+
+					<tbody>
+						<tr>
+							<td> Total Games</td>
+							<td> $$statindex2</td>
+						</tr>
+
+						<tr>
+							<td> Experience Earned</td>
+							<td> $$statindex3</td>
+						</tr>
+
+						<tr>
+							<td>Time Played</td>
+							<td> $$statindex4</td>
+						</tr>
+
+
+					</tbody>
+
+				</table>
+
+
 			</div>
 			<div class = "stats-content hide">
-				1
+				<table id = "stats-MSG">
+					<thead>
+						<tr><td colspan  = "4"> Mindcrack Survival Games </td></tr>
+					</thead>
+
+					<tbody>
+						<tr>
+							<td> Total Games </td>
+							<td> $$statindex5 </td>
+						</tr>
+
+						<tr>
+							<td> Experience Earned</td>
+							<td> $$statindex6</td>
+						</tr>
+
+						<tr>
+							<td> Total Time</td>
+							<td> $$statindex7</td>
+						</tr>
+
+						<tr>
+							<td> Total Kills</td>
+							<td> $$statindex8</td>
+						</tr>
+
+						<tr>
+							<td> Brawlers</td>
+							<td> $$statindex9</td>
+						</tr>
+
+						<tr>
+							<td> Total Wins </td>
+							<td> $$statindex10 </td>
+						</tr>
+
+						<tr>
+							<td> Total Kills </td>
+							<td> $$statindex11 </td>
+						</tr>
+
+
+					</tbody>
+				</table>
+
+
 			</div>
 			<div class = "stats-content hide">
-				2
+				<table id = "stats-crackattack">
+					<thead>
+						<tr><td colspan  = "4"> Crack Attack </td></tr>
+					</thead>
+
+					<tbody>
+						<tr>
+							<td>Total Games</td>
+							<td> $$statindex12</td>
+						</tr>
+
+						<tr>
+							<td> Total Time</td>
+							<td> $$statindex13</td>
+						</tr>
+
+						<tr>
+							<td>Total Kills</td>
+							<td> $$statindex14</td>
+						</tr>
+
+						<tr>
+							<td>Red Wins</td>
+							<td> $$statindex15</td>
+						</tr>
+
+						<tr>
+							<td> Green Wins </td>
+							<td> $$statindex16</td>
+						</tr>
+
+						<tr>
+							<td> Blue Wins</td>
+							<td> $$statindex17</td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
 			<div class = "stats-content hide">
-				3
+				<table id = "stats-blackbeard">
+					<thead>
+						<tr><td colspan  = "4"> Blackbeard </td></tr>
+					</thead>
+
+					<tbody>
+						<tr>
+							<td>Total Games</td>
+							<td>$$statindex18</td>
+						</tr>
+
+						<tr>
+							<td>Total Time</td>
+							<td> $$statindex19</td>
+						</tr>
+
+						<tr>
+							<td> Total Wins</td>
+							<td>$$statindex20</td>
+						</tr>
+
+						<tr>
+							<td> Gold Looted</td>
+							<td> $$statindex21</td>
+						</tr>
+
+						<tr>
+							<td> Gold Stored</td>
+							<td> $$statindex22</td>
+						</tr>
+
+						<tr>
+							<td> Upgrades</td>
+							<td> $$statindex23</td>
+						</tr>
+
+					</tbody>
+				</table>
 			</div>
 			<div class = "stats-content hide">
-				4
+				<table id = "stats-UHC">
+					<thead>
+						<tr><td colspan  = "4"> UHC </td></tr>
+					</thead>
+
+					<tbody>
+						<tr>
+							<td>Total Wins</td>
+							<td>$$statindex24</td>
+						</tr>
+
+						<tr>
+							<td>Total Kills</td>
+							<td> $$statindex25</td>
+						</tr>
+
+						<tr>
+							<td> Total Deaths</td>
+							<td>$$statindex26</td>
+						</tr>
+
+						<tr>
+							<td> Falls </td>
+							<td> $$statindex27</td>
+						</tr>
+
+						<tr>
+							<td> Gapples Eaten</td>
+							<td> $$statindex28</td>
+						</tr>
+
+						<tr>
+							<td> Notch Apples Eaten</td>
+							<td> $$statindex29</td>
+						</tr>
+
+						<tr> 
+							<td>Total Gold</td>
+							<td> $$statindex30</td>
+						</tr>
+
+						<tr>
+							<td> #ForTheHorse</td>
+							<td>$$statindex31</td>
+						</tr>
+
+
+					</tbody>
+				</table>
 			</div>
 			<div class = "stats-content hide">
-				5
+				<table id = "stats-camelot">
+					<thead>
+						<tr><td colspan  = "4"> Camelot </td></tr>
+					</thead>
+
+					<tbody>
+						<tr>
+							<td> Total Games</td>
+							<td>$$statindex32</td>
+						</tr>
+
+						<tr>
+							<td> Experience Earned</td>
+							<td> $$statindex33</td>
+						</tr>
+
+						<tr>
+							<td> Total Time</td>
+							<td>$$statindex34</td>
+						</tr>
+
+						<tr>
+							<td> Lords </td>
+							<td> $$statindex35</td>
+						</tr>
+
+						<tr>
+							<td> Dukes </td>
+							<td> $$statindex36</td>
+						</tr>
+
+						<tr>
+							<td> Spartans </td>
+							<td> $$statindex37 </td>
+						</tr>
+
+						<tr>
+							<td>Castle Captures</td>
+							<td> $$statindex38</td>
+						</tr>
+
+						<tr>
+							<td>Wins</td>
+							<td> $$statindex39</td>
+						</tr>
+
+					</tbody>
+				</table>
 			</div>
 			<div class = "stats-content hide">
-				6
+				<table id = "stats-KGM">
+					<thead>
+						<tr><td colspan  = "4"> King of the Golden Monocle </td></tr>
+					</thead>
+
+					<tbody>
+						<tr>
+							<td> Total Games</td>
+							<td>$$statindex40</td>
+						</tr>
+
+						<tr>
+							<td> Experience Earned</td>
+							<td> $$statindex41</td>
+						</tr>
+
+						<tr>
+							<td> Total Time</td>
+							<td> $$statindex42</td>
+						</tr>
+
+						<tr>
+							<td> Kills</td>
+							<td> $$statindex43</td>
+						</tr>
+
+						<tr>
+							<td> Deaths </td>
+							<td> $$statindex44</td>
+						</tr>
+
+						<tr>
+							<td> First</td>
+							<td> $$statindex45</td>
+						</tr>
+
+						<tr> 
+							<td> Second</td>
+							<td> $$statindex46</td>
+						</tr>
+
+						<tr>
+							<td> Third</td>
+							<td> $$statindex47</td>
+						</tr>
+
+						<tr>
+							<td> Top Ten</td>
+							<td> $$statindex48</td>
+						</tr>
+
+						<tr> 
+							<td>Highest Score</td>
+							<td> $$statindex49</td>
+						</tr>
+
+					</tbody>
+				</table>
 			</div>
 			<div class = "stats-content hide">
-				7
+				<table id = "stats-powerjuice">
+					<thead>
+						<tr><td colspan  = "4"> Power Juice </td></tr>
+					</thead>
+
+					<tbody>
+						<tr>
+							<td> Total Games</td>
+							<td>$$statindex50</td>
+						</tr>
+
+						<tr>
+							<td> Experience Earned</td>
+							<td> $$statindex51</td>
+						</tr>
+
+						<tr>
+							<td> Total Time</td>
+							<td> $$statindex52</td>
+						</tr>
+
+						<tr>
+							<td> Kills</td>
+							<td> $$statindex53</td>
+						</tr>
+
+						<tr>
+							<td> Deaths </td>
+							<td> $$statindex54</td>
+						</tr>
+
+						<tr>
+							<td> First</td>
+							<td> $$statindex55</td>
+						</tr>
+
+						<tr> 
+							<td> Second</td>
+							<td> $$statindex56</td>
+						</tr>
+
+						<tr>
+							<td> Third</td>
+							<td> $$statindex57</td>
+						</tr>
+
+						<tr>
+							<td> Top Ten</td>
+							<td> $$statindex58</td>
+						</tr>
+
+						<tr> 
+							<td>Highest Score</td>
+							<td> $$statindex59</td>
+						</tr>
+
+					</tbody>
+				</table>
 			</div>
 
 		</div>
