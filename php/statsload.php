@@ -102,7 +102,7 @@ fwrite($siteFile, "<h1>This be the playa ".$playersName."</h1>");
     Should replaces this with EOD and actual player's site construction.
 */
 for($i = 0; $i < count($colIndices);$i++){
-    fwrite($siteFile, "<p>". $colIndices[$i].": ".$playerData[$i]."</p>");
+    fwrite($siteFile, "<p>". $colIndices[$i].": ".$playerData[$i]." and index of: ".strval($i)."</p>");
 }
 
 fclose($siteFile);
