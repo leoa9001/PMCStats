@@ -4,6 +4,15 @@
 Scroll Bar
 */
 
+
+/*
+List of browsers:
+webkit
+ms
+o
+moz
+*/
+
 ::-webkit-scrollbar {
 	width: 6px;
 }

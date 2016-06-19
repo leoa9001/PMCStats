@@ -107,6 +107,16 @@ for($i = 0; $i < count($colIndices);$i++){
 
 fclose($siteFile);
 
+$siteString = file_get_contents("../data/index.html");
+
+for($i = 1; $i < count($colIndices);$i++){
+    $siteString = str_replace("$$statindex".strval($i), $playerData[$i], $siteString);
+}
+
+echo $siteString;
+echo str_replace("hello","crossover", "hello there.");
+
+
 //finally redirecet
 header("Location: ../stats/players/".$playersName."/index.html");
 
