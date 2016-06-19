@@ -80,6 +80,8 @@ if(!$playerFound){
 	return;
 }
 
+// mkdir("../stats/".$playersName,0770);
+
 grab_image("http://mcskinsearch.com/download/".$playersName, "../img/player heads/".$playersName.".png");
 
 $rect = array("x" => 8, "y" => 8, "width" => 8, "height" => 8);
@@ -95,26 +97,33 @@ mkdir("../stats/players/".$playersName, 0700);
 
 $siteFile = fopen("../stats/players/".$playersName."/index.html", "w");
 
-fwrite($siteFile, "<h1>This be the playa ".$playersName."</h1>");
+// fwrite($siteFile, "<h1>This be the playa ".$playersName."</h1>");
 
 
 /*
     Should replaces this with EOD and actual player's site construction.
 */
-for($i = 0; $i < count($colIndices);$i++){
-    fwrite($siteFile, "<p>". $colIndices[$i].": ".$playerData[$i]." and index of: ".strval($i)."</p>");
-}
+// for($i = 0; $i < count($colIndices);$i++){
+//     fwrite($siteFile, "<p>". $colIndices[$i].": ".$playerData[$i]." and index of: ".strval($i)."</p>");
+// }
 
-fclose($siteFile);
+// fclose($siteFile);
 
 $siteString = file_get_contents("../data/index.html");
 
-for($i = 1; $i < count($colIndices);$i++){
-    $siteString = str_replace("$$statindex".strval($i), $playerData[$i], $siteString);
+for($i = 10; $i < count($colIndices);$i++){
+    $siteString = preg_replace("%statindex".strval($i)."%", $playerData[$i], $siteString);
 }
 
-echo $siteString;
-echo str_replace("hello","crossover", "hello there.");
+for($i = 1; $i < 10;$i++){
+    $siteString = preg_replace("%statindex".strval($i)."%", $playerData[$i], $siteString);
+}
+
+// echo $siteString;
+fwrite($siteFile, $siteString);
+
+fclose($siteFile);
+// echo str_replace("hello","crossover", "hello there.");
 
 
 //finally redirecet
